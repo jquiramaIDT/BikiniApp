@@ -1,0 +1,53 @@
+@import './main';
+
+.cardInfo {
+    @include centerMobile();
+    &__container {
+      margin: 7rem 0 12rem 0;
+      @include centerMobile();
+      gap: 89px 129px;
+      &--card {
+        border-radius: 20px;
+        border: 2px solid $primary-color-text;
+        width: 266px;
+        height: 275px;
+        padding: 1rem;
+        @include centerMobile();
+        justify-content: space-evenly;
+        gap: 0.6rem;
+        &-img {
+          width: 112px;
+          height: 112px;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+        &-info {
+          &-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.07px;
+          }
+          &-text {
+            font-size: 16px;
+            font-weight: 100;
+            text-align: center;
+            letter-spacing: -0.05px;
+            line-height: 1.1em;
+          }
+        }
+      }
+  
+      @media (min-width: 768px) {
+        @include centerDesktop();
+        max-width: 80%;
+      
+      }
+      @media (min-width: 1100px) {
+        @include centerDesktop();
+        max-width: 75%;
+      }
+    }
+  }

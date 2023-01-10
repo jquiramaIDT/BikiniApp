@@ -1,0 +1,81 @@
+@import './main';
+
+.title {
+    @include title();
+    @media (min-width: 768px) {
+      background-color: black;
+      color: white;
+      & h1 {
+        font-size: 108px;
+        letter-spacing: -1.84px;
+      }
+      & p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 21px;
+        letter-spacing: -0.36px;
+        opacity: 1;
+        
+       
+      }
+    }
+  }
+  .categories {
+    display: flex;
+    overflow-x: auto;
+    &__card {
+      margin: 36px 43px;
+      &-img {
+        width: 323px;
+        height: 204px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-glass {
+        overflow-x: auto;
+        position: absolute;
+        
+        width: 323px;
+        height: 204px;
+        background-color: #000;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-size: 44px;
+        font-family: ironstrike, sans-serif;
+        cursor: pointer;
+        &:hover{
+          font-size: 55px;
+          transition: all 0.3s;
+        }
+      }
+      &-title {
+        text-align: center;
+        font-size: 35px;
+      }
+    }
+  
+    @media (min-width: 768px) {
+        @include centerDesktop();
+        
+      }
+  }
+  
+  .text{
+    text-align: center;
+    font-size: 31px;
+    font-family: "Montserrat", sans-serif;
+    font-style: Italic ;
+    letter-spacing: -0.54px;
+    font-weight: 100;
+    opacity: 1;
+    margin-bottom: 4rem;
+  
+    
+  
+  
+  }

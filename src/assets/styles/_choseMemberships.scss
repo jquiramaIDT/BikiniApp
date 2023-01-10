@@ -1,0 +1,42 @@
+@import "./main";
+.memberships {
+  @include centerMobile();
+  gap: 29px;
+
+  margin-bottom: 42px;
+  &__title {
+    font: italic normal 900 37px/44px Ironstrike;
+    margin-top: 42px;
+    color: $primary-color-1;
+    text-align: center;
+    letter-spacing: -0.11px;
+  }
+  &__container {
+    display: flex;
+    flex-flow: column;
+    gap: 36px;
+
+    &--card {
+        cursor: pointer;
+      width: 350px;
+      height: 244px;
+      border: 2px solid $primary-color-1;
+      border-radius: 14px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      padding: 0 1.5rem;
+    //   padding-left: 2rem;
+      line-height: 1.1em;
+      &-title{
+        color: $primary-color-1;
+      }
+      & li {
+        font: normal normal normal 14px/17px Montserrat;
+       
+      }
+      
+     
+    }
+  }
+}

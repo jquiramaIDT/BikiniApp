@@ -1,0 +1,112 @@
+@import './main';
+.container {
+    @include centerMobile();
+    &__title {
+      @include title;
+    }
+    &__items {
+      align-items: center;
+      margin-bottom: 10rem;
+      &--classAvailable {
+        // border: 1px solid tomato;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+  
+        &-items {
+          border: 1px solid white;
+          border-radius: 20px;
+          width: 337px;
+          height: 212px;
+          display: flex;
+          flex-direction: column;
+          &-class {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            & p {
+              font-size: 25px;
+            }
+          }
+          &-boton{
+            
+            text-align: center;
+            & button {
+              
+              @include primaryBtn();
+              
+            }
+          }
+        }
+      }
+  
+      &--options {
+        padding: 20px;
+        &-chose {
+          margin-bottom: 1rem;
+          & p {
+            background-color: white;
+            color: black;
+            padding: 1rem;
+            border-radius: 0.4rem;
+            font-weight: 900;
+            cursor: pointer;
+            &:active {
+              transform: scale(0.6);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+        &-hours {
+          border-radius: 20px;
+          border: 1px solid white;
+          color: white;
+          width: 382px;
+          height: 338px;
+          padding: 0.6rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          place-content: center;
+          list-style: none;
+          & li {
+            margin: 0.4rem;
+            padding: 0.3rem 0;
+  
+            opacity: 0.8;
+            border-radius: 0.4rem;
+            text-align: center;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 16px;
+  
+            &:active {
+              transform: scale(0.6);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      &__title {
+        background-color: black;
+        color: white;
+        & h1 {
+          font-size: 108px;
+          letter-spacing: -1.84px;
+        }
+      }
+      &__items {
+        @include centerDesktop();
+        gap: 1rem;
+        &--options {
+          &-chose {
+            display: flex;
+  
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }

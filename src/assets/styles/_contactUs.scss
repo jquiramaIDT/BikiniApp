@@ -1,0 +1,104 @@
+@import './main';
+
+.contactUs {
+    @include centerMobile();
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      &--title {
+        font-family: ironstrike, sans-serif;
+        font-size: 82px;
+        color: $primary-color-1;
+      }
+      input {
+        padding: 0 12px;
+        width: 396px;
+        height: 23px;
+        border-radius: 20px;
+        border: none;
+      }
+      textarea {
+        width: 396px;
+        height: 153px;
+        border-radius: 21px;
+  
+        border: none;
+      }
+      & button {
+        @include primaryBtn();
+        background-color: $primary-color-1;
+        color: white;
+      }
+    }
+    &__content {
+      text-align: center;
+      width: 100%;
+      background-color: rgb(41, 39, 39);
+      padding: 2rem 0;
+  
+      &-1 {
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-size: 59px;
+        font-weight: 100;
+        letter-spacing: -1.02px;
+      }
+      &-2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 84px;
+        font-weight: 700;
+        letter-spacing: -1.43px;
+      }
+      &-3 {
+        display: flex;
+        justify-content: center;
+        & p {
+          width:150px ;
+        background-color: white;
+        border-radius: 20px;
+        color: black;
+        letter-spacing: -1.02px;
+        padding: 0.6rem;
+        font-style: italic;
+        font-size: 59px;
+        font-family: "Montserrat", sans-serif;
+  
+        }
+      }
+      &-4 {
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-size: 59px;
+        font-weight: 500;
+        letter-spacing: -1.02px;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      flex-flow: row nowrap;
+      margin: 11rem 0;
+      align-items: center;
+      justify-content: center;
+      gap: 10rem;
+      &__container {
+        & input {
+          width: 596px;
+          height: 43px;
+          border-radius: 20px;
+        }
+        textarea {
+          width: 596px;
+          height: 200px;
+        }
+      }
+      &__content {
+        background-color: black;
+        border: 2px solid white;
+        border-radius: 45px;
+        width: 569px;
+        height: 430px;
+      }
+    }
+  }

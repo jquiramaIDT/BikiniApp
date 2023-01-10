@@ -1,0 +1,42 @@
+@import './main';
+.memberships {
+    @include centerMobile();
+    gap:4rem;
+    margin-bottom: 10rem;
+    &__title {
+      @include title();
+    }
+    &__card {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.1em;
+      border-radius: 20px;
+      border: 2px solid $primary-color-1;
+      padding: 1rem;
+      &-boton {
+        @include secundaryBtn();
+      }
+    }
+    @media (min-width: 768px) {
+      @include centerDesktop();
+      &__title{
+        background-color: black;
+        color: white;
+        & h1 {
+          font-size: 101px;
+          letter-spacing: -1.72px;
+        }
+      }
+      &__card {
+        width: 364px;
+        border: 2px solid $primary-color-text;
+        &-boton {
+          @include secundaryBtn();
+          font-size: 20px;
+        }
+      }
+    }
+  }

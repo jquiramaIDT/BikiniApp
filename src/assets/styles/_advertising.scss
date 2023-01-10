@@ -1,0 +1,31 @@
+@import './main';
+
+.advertising {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    &__title {
+      @include title();
+      @media (min-width: 768px) {
+        background-color: black;
+        color: $primary-color-1;
+        & h1 {
+          font-size: 108px;
+          letter-spacing: -1.84px;
+        }
+      }
+    }
+    &__boton{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      & button {
+        @include secundaryBtn();
+        font-size: 21px;
+        color: black;
+        letter-spacing: -0.06px;
+        background-color: white;
+      }
+    }
+  }
